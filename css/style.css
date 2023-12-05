@@ -1,0 +1,45 @@
+body{
+    background-color:aliceblue;
+}
+
+.card-header{
+    height: 50px;
+    font-size: larger;
+}
+
+.card-header--mod1{
+    background-color: bisque;
+}
+
+.card-header--mod2{
+    background-color:darkseagreen;
+}
+
+.card-header--mod3{
+    background-color:cornflowerblue;
+}
+
+.upDownNumeric{
+    position: relative;
+}
+
+.popup {
+    position:absolute;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 5px;
+    top: -4px;
+    right: -270px;
+}
+
+.formated{
+    overflow: hidden;
+    text-wrap:balance;
+}
+
+.lbl{
+    color: gray;
+    font-size: small;
+}
