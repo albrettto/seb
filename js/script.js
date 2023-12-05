@@ -24,14 +24,11 @@ document.querySelectorAll('.form-control').forEach(input => {
 function recalculateWeights(values, weights) {
     let totalWeight = 0;
     let newWeights = [];
-    let emptyValues = [];
     // Вычисляем общий вес для ненулевых показателей
     for (let i = 0; i < values.length; i++) {
         if (values[i] !== 0) {
             totalWeight += weights[i];
         }
-        else 
-            emptyValues.push(i)
     }
 
     // Рассчитываем новые веса для ненулевых показателей
@@ -42,7 +39,7 @@ function recalculateWeights(values, weights) {
             newWeights.push(weights[i] / totalWeight);
         }
     }
-    return [newWeights, emptyValues];
+    return newWeights;
 }
 
 function multiplyArraysAndCalculateRoot(arr1, arr2) {
@@ -105,9 +102,9 @@ document.getElementById('calculation').addEventListener('click', function() {
     let finEcon = values.slice(17, 21); // Следующие 4 элемента
     let edQuality = values.slice(21); // Остальные элементы
 
-    let [newWeights1, emptyValues1] = recalculateWeights(science, weights1);
-    let [newWeights2, emptyValues2] = recalculateWeights(finEcon, weights2);
-    let [newWeights3, emptyValues3] = recalculateWeights(edQuality, weights3);
+    let newWeights1 = recalculateWeights(science, weights1);
+    let newWeights2 = recalculateWeights(finEcon, weights2);
+    let newWeights3 = recalculateWeights(edQuality, weights3);
     
     let resScience = multiplyArraysAndCalculateRoot(science, newWeights1)*10;
     let resFinEcon = multiplyArraysAndCalculateRoot(finEcon, newWeights2);
@@ -115,14 +112,28 @@ document.getElementById('calculation').addEventListener('click', function() {
 
     let result = Math.pow(resFinEcon * resScience * resEdQuality, 1 / 3);
 
+    // Находим все элементы div с классом 'popup'
+let popups = document.querySelectorAll('div.popup');
+
+// Создаем массив для хранения id
+let activePopupIds = [];
+
+// Перебираем найденные элементы
+popups.forEach(function(popup) {
+    // Проверяем, отображается ли элемент
+    if (popup.style.display === 'block') {
+        // Если да, добавляем его id в массив
+        activePopupIds.push(popup.id);
+    }
+});
+let numericIds = activePopupIds.map(id => id.replace("popNot", ""));
+
     let data = {
             "Результат для финансовой деятельности" : resFinEcon,
             "Результат для научной деятельности" : resScience,
             "Результат для учебной деятельности" : resEdQuality,
             "Результат" : result,
-            "Пустые id для научной деятельности" : emptyValues1,
-            "Пустые id для финансовой деятельности" : emptyValues2,
-            "Пустые id для учебной деятельности" : emptyValues3,
+            "ID" : numericIds
         }
 
 
