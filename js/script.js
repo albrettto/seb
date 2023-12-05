@@ -109,7 +109,7 @@ document.getElementById('calculation').addEventListener('click', function() {
     let [newWeights2, emptyValues2] = recalculateWeights(finEcon, weights2);
     let [newWeights3, emptyValues3] = recalculateWeights(edQuality, weights3);
     
-    let resScience = multiplyArraysAndCalculateRoot(science, newWeights1);
+    let resScience = multiplyArraysAndCalculateRoot(science, newWeights1)*10;
     let resFinEcon = multiplyArraysAndCalculateRoot(finEcon, newWeights2);
     let resEdQuality = multiplyArraysAndCalculateRoot(edQuality, newWeights3);
 
