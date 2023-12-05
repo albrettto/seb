@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
     <header class="header mt-4">
         <h1 class="text-center">Система экономической безопасности</h1>
@@ -16,386 +14,60 @@
     <main class="container">
 
         <section class="card mt-5">
-            <div class="card-header card-header--mod1 d-flex align-items-center">
-                <span>Научно-исследовательская деятельность</span>
+            <div class="card-header card-header--mod d-flex align-items-center ">
+                Результаты
             </div>
-            <div class="card-body">
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество цитирований в индексируемой системе цитирования Web of
-                        Science
-                        в расчете на 100 научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp17">
-                        <label for="numInp17" class="lbl">Порог: 400 ед.</label>
-                        <div id="popNot17" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество цитирований в индексируемой системе цитирования Scopus
-                        в
-                        расчете на 100 научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp18">
-                        <label for="numInp18" class="lbl">Порог: 500 ед.</label>
-                        <div id="popNot18" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество цитирований в Российском индексе научного цитирования
-                        (далее -
-                        РИНЦ) в расчете на 100 научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp19">
-                        <label for="numInp19" class="lbl">Порог: 1000 ед.</label>
-                        <div id="popNot19" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество статей в научной периодике, индексируемой в системе
-                        цитирования
-                        Web of Science, в расчете на 100 научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp20">
-                        <label for="numInp20" class="lbl">Порог: 20 ед.</label>
-                        <div id="popNot20" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество статей в научной периодике, индексируемой в системе
-                        цитирования
-                        Scopus, в расчете на 100 научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp21">
-                        <label for="numInp21" class="lbl">Порог: 45 ед.</label>
-                        <div id="popNot21" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество публикаций в РИНЦ в расчете на 100
-                        научно-педагогических
-                        работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp22">
-                        <label for="numInp22" class="lbl">Порог: 100 ед.</label>
-                        <div id="popNot22" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Общий объем научно-исследовательских, опытно-конструкторских и
-                        технологических работ (далее - НИОКР)</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" step="0.5" class="form-control" id="numInp23">
-                        <label for="numInp23" class="lbl">Порог: 300 500,5</label>
-                        <div id="popNot23" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Объем НИОКР в расчете на одного научно-педагогического работника
-                    </p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp24">
-                        <label for="numInp24" class="lbl">Порог: 450</label>
-                        <div id="popNot24" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Удельный вес доходов от НИОКР в общих доходах образовательной
-                        организации
-                    </p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp25">
-                        <label for="numInp25" class="lbl">Порог: 5%</label>
-                        <div id="popNot25" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Удельный вес НИОКР, выполненных собственными силами (без
-                        привлечения
-                        соисполнителей), в общих доходах образовательной организации от НИОКР</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp26">
-                        <label for="numInp26" class="lbl">Порог: 70%</label>
-                        <div id="popNot26" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Доходы от НИОКР (за исключением средств бюджетов бюджетной системы
-                        Российской Федерации, государственных фондов поддержки науки) в расчете на одного
-                        научно-педагогического
-                        работника</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp27">
-                        <label for="numInp27" class="lbl">Порог: 300 руб.</label>
-                        <div id="popNot27" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество лицензионных соглашений, ед.</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp28">
-                        <label for="numInp28" class="lbl">Порог: 5 ед.</label>
-                        <div id="popNot28" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Удельный вес средств, полученных образовательной организацией от
-                        управления объектами интеллектуальной собственности, в общих доходах образовательной организации
-                    </p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" step="0.01" class="form-control" id="numInp29">
-                        <label for="numInp19" class="lbl">Порог: 0,02</label>
-                        <div id="popNot29" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество грантов за отчетный период в расчете на 100
-                        научно-педагогических работников</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp30">
-                        <label for="numInp30" class="lbl">Порог: 3 ед.</label>
-                        <div id="popNot30" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество научных журналов, в том числе электронных, издаваемых
-                        образовательной организацией</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp31">
-                        <label for="numInp31" class="lbl">Порог: 1 ед.</label>
-                        <div id="popNot31" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Численность/удельный вес численности научно-педагогических
-                        работников,
-                        имеющих ученую степень кандидата и доктора наук, в общей численности научно-педагогических
-                        работников
-                        филиала (без совместителей и работающих по договорам гражданско-правового характера)</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp32">
-                        <label for="numInp32" class="lbl">Порог: 7,5%</label>
-                        <div id="popNot32" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Численность/удельный вес численности научно-педагогических
-                        работников,
-                        имеющих ученую степень доктора наук, в общей численности научно-педагогических работников
-                        образовательной организации</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp33">
-                        <label for="numInp33" class="lbl">Порог: 7,5%</label>
-                        <div id="popNot33" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="card mt-5">
-            <div class="card-header card-header--mod2 d-flex align-items-center">
-                <span>Финансово-экономическая деятельность</span>
-            </div>
-            <div class="card-body">
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Доходы образовательной организации по всем видам финансового
-                        обеспечения
-                        (деятельности)</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp13">
-                        <label for="numInp13" class="lbl">Порог: 2 000 000 руб.</label>
-                        <div id="popNot13" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Доходы образовательной организации по всем видам финансового
-                        обеспечения
-                        (деятельности) в расчете на одного научно-педагогического работника</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp14">
-                        <label for="numInp14" class="lbl">Порог: 3 000 руб.</label>
-                        <div id="popNot14" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Доходы образовательной организации из средств от приносящей доход
-                        деятельности в расчете на одного научно-педагогического работника</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp15">
-                        <label for="numInp15" class="lbl">Порог: 1500 руб.</label>
-                        <div id="popNot15" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Отношение среднего заработка научно-педагогического работника в
-                        образовательной организации (по всем видам финансового обеспечения (деятельности)) к
-                        соответствующей
-                        среднемесячной начисленной заработной плате наемных работников в организациях, у индивидуальных
-                        предпринимателей и физических лиц (среднемесячному доходу от трудовой деятельности) в субъекте
-                        Российской Федерации</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp16">
-                        <label for="numInp19" class="lbl">Порог: 100%</label>
-                        <div id="popNot16" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="card mt-5">
-            <div class="card-header card-header--mod3 d-flex align-items-center">
-                <span>Образовательная деятельность</span>
-            </div>
-            <div class="card-body">
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Общая численность студентов (курсантов), обучающихся по
-                        образовательным
-                        программам бакалавриата, программам специалитета, программам магистратуры</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp1">
-                        <label for="numInp1" class="lbl">Порог: 10 000 чел.</label>
-                        <div id="popNot1" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Общая численность аспирантов (адъюнктов, ординаторов, интернов,
-                        ассистентов-стажеров), обучающихся по образовательным программам подготовки
-                        научно-педагогических кадров
-                        в аспирантуре (адъюнктуре), программам ординатуры, программам ассистентуры-стажировки</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp2">
-                        <label for="numInp2" class="lbl">Порог: 100 чел.</label>
-                        <div id="popNot2" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Общая численность студентов (курсантов), обучающихся по
-                        образовательным
-                        программам среднего профессионального образования</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp3">
-                        <label for="numInp3" class="lbl">Порог: 3000 чел.</label>
-                        <div id="popNot3" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Средний балл студентов (курсантов), принятых по результатам
-                        единого
-                        государственного экзамена на первый курс на обучение по очной форме по программам бакалавриата и
-                        специалитета по договору об образовании на обучение по образовательным программам высшего
-                        образования
-                    </p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp4">
-                        <label for="numInp4" class="lbl">Порог: 63 балла</label>
-                        <div id="popNot4" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Средний балл студентов (курсантов), принятых по результатам
-                        дополнительных
-                        вступительных испытаний на первый курс на обучение по очной форме по программам бакалавриата и
-                        специалитета по договору об образовании на обучение по образовательным программам высшего
-                        образования
-                    </p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp5">
-                        <label for="numInp5" class="lbl">Порог: 54 балла</label>
-                        <div id="popNot5" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Средний балл студентов (курсантов), принятых по результатам
-                        единого
-                        государственного экзамена и результатам дополнительных вступительных испытаний на обучение по
-                        очной
-                        форме по программам бакалавриата и специалитета за счет средств соответствующих бюджетов
-                        бюджетной
-                        системы Российской Федерации</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp6">
-                        <label for="numInp6" class="lbl">Порог: 60 баллов</label>
-                        <div id="popNot6" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Численность студентов (курсантов) - победителей и призеров
-                        олимпиад
-                        школьников, принятых на очную форму обучения на первый курс по программам бакалавриата и
-                        специалитета по
-                        специальностям и направлениям подготовки, соответствующим профилю олимпиады школьников, без
-                        вступительных испытаний</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp7">
-                        <label for="numInp7" class="lbl">Порог: 10 чел.</label>
-                        <div id="popNot7" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Численность/удельный вес численности студентов (курсантов),
-                        принятых на
-                        условиях целевого приема на первый курс на очную форму обучения по программам бакалавриата и
-                        специалитета в общей численности студентов (курсантов), принятых на первый курс по программам
-                        бакалавриата и специалитета на очную форму обучения</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp8">
-                        <label for="numInp8" class="lbl">Порог: 19,8%</label>
-                        <div id="popNot8" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Удельный вес численности студентов (курсантов), обучающихся по
-                        программам
-                        магистратуры, в общей численности студентов (курсантов), обучающихся по образовательным
-                        программам
-                        бакалавриата, программам специалитета, программам магистратуры</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp9">
-                        <label for="numInp9" class="lbl">Порог: 20%</label>
-                        <div id="popNot9" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Численность/удельный вес численности студентов (курсантов),
-                        имеющих диплом
-                        бакалавра, диплом специалиста или диплом магистра других организаций, осуществляющих
-                        образовательную
-                        деятельность, принятых на первый курс на обучение по программам магистратуры образовательной
-                        организации, в общей численности студентов (курсантов), принятых на первый курс по программам
-                        магистратуры на очную форму обучения</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp10">
-                        <label for="numInp10" class="lbl">Порог: 6%</label>
-                        <div id="popNot10" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Общая численность студентов образовательной организации,
-                        обучающихся в
-                        филиале образовательной организации (далее - филиал)</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp11">
-                        <label for="numInp11" class="lbl">Порог: 1000 чел.</label>
-                        <div id="popNot11" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
-                <div class="parameters row align-items-center my-5">
-                    <p class="col-md-9 my-auto mx-3">Количество студентов трудоустроенных по специальности</p>
-                    <div class="col-md-2 ms-auto mx-3 upDownNumeric">
-                        <input type="number" value="0" min="0" class="form-control" id="numInp12">
-                        <label for="numInp12" class="lbl">Порог: 10 000 чел.</label>
-                        <div id="popNot12" class="popup" style="display: block;">Значение ниже порогового!</div>
-                    </div>
-                </div>
+            <div class="card-body" id="calculation">
+                <p id="resultScience">Результат для научной деятельности: <span></span></p>
+                <p id="resultFinance">Результат для финансовой деятельности: <span></span></p>
+                <p id="resultEducation">Результат для учебной деятельности: <span></span></p>
+                <p id="resultOverall">Общий результат: <span></span></p>
             </div>
         </section>
 
+        <section class="card mt-5 information1">
+            <div class="card-header card-header--mod1 d-flex align-items-center ">
+                Научно-исследовательская деятельность
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">Показатели</div>
+                    <div class="col-4">Угрозы</div>
+                    <div class="col-4">Мероприятия</div>
+                </div>
+                <div class="resScience"></div>
+            </div>
+        </section>
 
-        <div class="d-flex justify-content-center my-5">
-            <a href="/results.html" class="btn btn-primary" id="calculation">Результаты</a>
-            <button class="btn btn-danger mx-5" id="reset">Очистить данные</button>
-        </div>
+        <section class="card mt-5 information2">
+            <div class="card-header card-header--mod2 d-flex align-items-center ">
+                Финансово-экономическая деятельность
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">Показатели</div>
+                    <div class="col-4">Угрозы</div>
+                    <div class="col-4">Мероприятия</div>
+                </div>
+                <div class="resFinance"></div>
+            </div>
+        </section>
+
+        <section class="card mt-5 information3">
+            <div class="card-header card-header--mod3 d-flex align-items-center ">
+                Образовательная деятельность
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-4">Показатели</div>
+                    <div class="col-4">Угрозы</div>
+                    <div class="col-4">Мероприятия</div>
+                </div>
+                    <div class="resEducation"></div>
+            </div>
+        </section>
     </main>
-
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/results.js"></script>
 </body>
-
 </html>
