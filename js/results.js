@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function addBlocksToDom() {
         if (sessionStorage.getItem("result") !== 'Не хватает данных') {
             let results = JSON.parse(sessionStorage.getItem("result"));
-            console.log(results);
 
             // Отображение результатов
             document.getElementById('resultFinance').querySelector('span').textContent = results["Результат для финансовой деятельности"].toFixed(2);
@@ -19,10 +18,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     const contSci = document.querySelector('.resScience');
                     const contFin = document.querySelector('.resFinance');
                     const contEdu = document.querySelector('.resEducation');
+
                     
-                    displayData(jsonData.filter(item => item.activity === "Научно-исследовательская деятельность"), results["Пустые id для научной деятельности"], contSci);
-                    displayData(jsonData.filter(item => item.activity === "Финансово-экономическая деятельность"), results["Пустые id для финансовой деятельности"], contFin);
-                    displayData(jsonData.filter(item => item.activity === "Образовательная деятельность"), results["Пустые id для учебной деятельности"], contEdu);
+                    displayData(jsonData.filter(item => item.activity === "Научно-исследовательская деятельность"), results["ID"], contSci);
+                    displayData(jsonData.filter(item => item.activity === "Финансово-экономическая деятельность"), results["ID"], contFin);
+                    displayData(jsonData.filter(item => item.activity === "Образовательная деятельность"), results["ID"], contEdu);
                 })
                 .catch(error => console.error('Ошибка при загрузке JSON:', error));
         } else {
@@ -39,22 +39,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Функция для отображения данных на основе id
     function displayData(jsonData, validIds, container) {
-        if(validIds.length == 0)
-        {
-            switch (container.className) {
-                case "resScience":
-                    document.getElementsByClassName('information1')[0].style.display = 'none';
-                  break;
-                case "resFinance":
-                  document.getElementsByClassName('information2')[0].style.display = 'none';
-                  break;
-                case "resEducation":                
-                    document.getElementsByClassName('information3')[0].style.display = 'none';
-                    break;
-              } 
-        }
         jsonData.forEach(item => {
-            if (validIds.includes(Number(item.id))) {
+            if (validIds.includes(item.id)) {
                 const div = document.createElement('div');
                 div.className = ('row mb-5 pt-5 ')
                 div.innerHTML = `
