@@ -1,43 +1,3 @@
-// let data
-// fetch('.//data.json') // Укажите правильный путь к файлу
-//     .then(response => response.json()) // Преобразование ответа в JSON
-//     .then(json => {
-//         // console.log(json); // Работа с данными
-//         data = json
-//         // Например, вывести имя
-//         // console.log("activity:", json[0].activity);
-//     })
-//     .catch(error => console.error('Ошибка при загрузке JSON:', error));
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-    
-//         // Функция для добавления блоков в DOM
-//         function addBlocksToDom() {
-//             let container = document.querySelector('.result');
-//             if(sessionStorage.getItem("result") != 'Не хватает данных')
-//             {
-//                 let results = JSON.parse(sessionStorage.getItem("result"))
-//                 console.log(results)
-//                 document.getElementById('resultFinance').querySelector('span').textContent = results["Результат для финансовой деятельности"];
-//                 document.getElementById('resultScience').querySelector('span').textContent = results["Результат для научной деятельности"];
-//                 document.getElementById('resultEducation').querySelector('span').textContent = results["Результат для учебной деятельности"];
-//                 document.getElementById('resultOverall').querySelector('span').textContent = results["Результат"];
-                
-//             }
-//             else{
-//                 document.getElementById('resultFinance').querySelector('span').textContent = 'Не хватает данных';
-//                 document.getElementById('resultScience').querySelector('span').textContent = 'Не хватает данных';
-//                 document.getElementById('resultEducation').querySelector('span').textContent = 'Не хватает данных';
-//                 document.getElementById('resultOverall').querySelector('span').textContent = 'Не хватает данных';
-//             }
-//         }
-    
-//         // Вызов функции для добавления блоков при загрузке страницы
-//         addBlocksToDom();
-//     });
-
-
 document.addEventListener('DOMContentLoaded', function () {
     
     // Функция для добавления блоков в DOM
@@ -47,10 +7,10 @@ document.addEventListener('DOMContentLoaded', function () {
             console.log(results);
 
             // Отображение результатов
-            document.getElementById('resultFinance').querySelector('span').textContent = results["Результат для финансовой деятельности"];
-            document.getElementById('resultScience').querySelector('span').textContent = results["Результат для научной деятельности"];
-            document.getElementById('resultEducation').querySelector('span').textContent = results["Результат для учебной деятельности"];
-            document.getElementById('resultOverall').querySelector('span').textContent = results["Результат"];
+            document.getElementById('resultFinance').querySelector('span').textContent = results["Результат для финансовой деятельности"].toFixed(2);
+            document.getElementById('resultScience').querySelector('span').textContent = results["Результат для научной деятельности"].toFixed(2);
+            document.getElementById('resultEducation').querySelector('span').textContent = results["Результат для учебной деятельности"].toFixed(2);
+            document.getElementById('resultOverall').querySelector('span').textContent = results["Результат"].toFixed(2);
 
             // Добавление данных на основе id
             fetch('.//data.json')
@@ -59,9 +19,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     const contSci = document.querySelector('.resScience');
                     const contFin = document.querySelector('.resFinance');
                     const contEdu = document.querySelector('.resEducation');
-                    console.log(jsonData.filter(item => item.activity === "Научно-исследовательская деятельность"))
-                    console.log(jsonData.filter(item => item.activity === "Финансово-экономическая деятельность"))
-                    console.log(jsonData.filter(item => item.activity === "Образовательная деятельность"))
                     
                     displayData(jsonData.filter(item => item.activity === "Научно-исследовательская деятельность"), results["Пустые id для научной деятельности"], contSci);
                     displayData(jsonData.filter(item => item.activity === "Финансово-экономическая деятельность"), results["Пустые id для финансовой деятельности"], contFin);
@@ -74,11 +31,28 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('resultScience').querySelector('span').textContent = 'Не хватает данных';
             document.getElementById('resultEducation').querySelector('span').textContent = 'Не хватает данных';
             document.getElementById('resultOverall').querySelector('span').textContent = 'Не хватает данных';
+            document.getElementsByClassName('information1')[0].style.display = 'none';
+            document.getElementsByClassName('information2')[0].style.display = 'none';
+            document.getElementsByClassName('information3')[0].style.display = 'none';
         }
     }
 
     // Функция для отображения данных на основе id
     function displayData(jsonData, validIds, container) {
+        if(validIds.length == 0)
+        {
+            switch (container.className) {
+                case "resScience":
+                    document.getElementsByClassName('information1')[0].style.display = 'none';
+                  break;
+                case "resFinance":
+                  document.getElementsByClassName('information2')[0].style.display = 'none';
+                  break;
+                case "resEducation":                
+                    document.getElementsByClassName('information3')[0].style.display = 'none';
+                    break;
+              } 
+        }
         jsonData.forEach(item => {
             if (validIds.includes(Number(item.id))) {
                 const div = document.createElement('div');
